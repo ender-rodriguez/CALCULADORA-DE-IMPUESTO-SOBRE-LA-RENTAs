@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculo de impuestos</title>
+
+  </head>
+    <body>
+
+    <script>
+
+        let sueldo = prompt("Digite su sueldo mensual:");
+        let anual = parseFloat(sueldo) * 12;
+        let impuesto = 0;
+
+
+          if (anual <= 416220.00) {
+            impuesto = 0;
+            } else if (anual <= 624329.00) {
+            impuesto = (anual - 416220.01) * 0.15;
+              } else if (anual <= 867123.00) {
+            impuesto = 31216.00 + ((anual - 624329.01) * 0.20);
+             } else {
+                impuesto = 79776.00 + ((anual - 867123.01) * 0.25);
+
+        }
+
+
+ let mensual = impuesto / 12;
+
+ document.write("Sueldo Anual: " + anual);
+  document.write("<br>Impuesto Anual a pagar: " + impuesto);
+   document.write("<br>Descuento Mensual: " + mensual);
+
+    </script>
+
+</body>
+</html>
